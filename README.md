@@ -3,6 +3,6 @@
 ## Team: DSC-DAIICT
 
 - Harsh Metkel
-- Krupan Shah
+- Krupal Shah
 - Chaitri Gudhka
 - Shivam Madlani
