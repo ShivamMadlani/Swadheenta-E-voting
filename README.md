@@ -25,3 +25,7 @@
 - Created dummy accounts on the localized test development environment Truffle Ganache using MetaMask
 - Wrote and deployed Smart Contract written in Solidity
 
+## Citations
+
+- BoilerPlate code by https://github.com/NFTSlim/Clarian01
+
