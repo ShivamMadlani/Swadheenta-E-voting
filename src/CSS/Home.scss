@@ -6,8 +6,15 @@
 }
 
 .home-container {
+  display: flex;
   width: 70vw;
   border: 1px solid black;
   height: 400px;
   border-radius: 1rem;
+}
+
+.box-img {
+  height: 20em;
+  width: 20em;
+  border: 1px solid black;
 }

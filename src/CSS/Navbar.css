@@ -22,16 +22,18 @@
 }
 
 .vote-btn {
-  background-color: #fff;
   font-size: 1.2em;
   border-radius: 8px;
   border: 2px solid #000;
   padding: 0.3em 0.5em;
   transition: all 0.25s ease-in-out;
   margin-left: auto;
+  background-color: #000;
+  color: #fff;
 }
 
 .vote-btn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
 }/*# sourceMappingURL=Navbar.css.map */
