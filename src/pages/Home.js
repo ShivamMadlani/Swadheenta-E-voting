@@ -6,10 +6,14 @@ import "../CSS/Home.css";
 
 const Home = () => {
   return (
-    <div className="home-page">
-      <Navbar />
-      <div className="home-container"></div>
-    </div>
+    <>
+      <div className="home-page">
+        <Navbar />
+        <div className="home-container">
+            
+        </div>
+      </div>
+    </>
   );
 };
 

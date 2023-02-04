@@ -10,10 +10,12 @@
   padding: 0.5em 1em;
   background-color: var(--light-blue);
   display: flex;
+  flex-direction: row;
   justify-self: space-between;
   height: 4em;
   border-bottom: 1px solid #000;
 }
+
 .logo {
   font-size: 2em;
   font-weight: 700;
@@ -26,6 +28,7 @@
   border: 2px solid #000;
   padding: 0.3em 0.5em;
   transition: all 0.25s ease-in-out;
+  margin-left: auto;
 }
 
 .vote-btn:hover {

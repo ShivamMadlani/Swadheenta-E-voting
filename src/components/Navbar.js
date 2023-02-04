@@ -5,9 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">D-मतदान</div>
-      <div>
-        <button className="vote-btn">Proceed to vote</button>
-      </div>
+      <button className="vote-btn">Proceed to vote</button>
     </nav>
   );
 };
