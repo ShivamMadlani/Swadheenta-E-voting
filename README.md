@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-### <b>Blockchain Technology (A decentralized platform to ensure impartial and transparent voting systems)</b>
+### Blockchain Technology (A decentralized platform to ensure impartial and transparent voting systems)
 
 ## Team: DSC-DAIICT
 
@@ -17,4 +17,3 @@
 - Decentralised network about Candidates and Voters
 - System deployed on Ethereum
 - Admin is able to watch realtime data about votes received by each candidates
-
