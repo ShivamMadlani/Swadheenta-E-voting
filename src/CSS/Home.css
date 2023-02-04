@@ -1,0 +1,12 @@
+.home-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container {
+  width: 70vw;
+  border: 1px solid black;
+  height: 400px;
+}/*# sourceMappingURL=Home.css.map */
