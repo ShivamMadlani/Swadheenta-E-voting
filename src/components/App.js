@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Web3 from "web3";
 
+// component and pages import
+import Home from "../pages/Home";
+
 const App = () => {
   const [accounts, setAccounts] = useState([]);
 
@@ -18,7 +21,9 @@ const App = () => {
 
   return (
     <div>
-      <div>hello world</div>
+      <div>
+        <Home />
+      </div>
     </div>
   );
 };
