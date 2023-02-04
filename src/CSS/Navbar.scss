@@ -19,6 +19,8 @@
 .logo {
   font-size: 2em;
   font-weight: 700;
+  text-decoration: none;
+  color: #000;
 }
 
 .vote-btn {
@@ -30,6 +32,7 @@
   margin-left: auto;
   background-color: #000;
   color: #fff;
+  text-decoration: none;
 }
 
 .vote-btn:hover {

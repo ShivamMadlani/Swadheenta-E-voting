@@ -6,6 +6,7 @@ import "../CSS/App.css";
 // component and pages import
 import Home from "../pages/Home";
 import UserLogin from "../pages/UserLogin";
+import Candidates from "../pages/Candidates";
 
 const App = () => {
   const [accounts, setAccounts] = useState([]);
@@ -25,8 +26,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<UserLogin />}></Route>
+        <Route path="/" element={<Home />} />x
+        <Route path="/login" element={<UserLogin />} />
+        <Route path="/vote" element={<Candidates />} />
       </Routes>
     </BrowserRouter>
   );

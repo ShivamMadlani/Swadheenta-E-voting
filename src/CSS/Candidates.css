@@ -1,0 +1,25 @@
+.candidates-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.Candidates{
+    display:flex;
+    text-align:center;
+    margin:1%;
+}
+
+.Candidates button{
+    background-color: deepskyblue;
+    border-color: blue;
+    text-align: center;
+    color:white;
+    padding:5px;
+}
+
+
