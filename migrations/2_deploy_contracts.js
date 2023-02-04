@@ -1,5 +1,5 @@
-const Tether = artifacts.require("Tether");
+const Ballot = artifacts.require("Ballot");
 
-module.exports = async function(deployer) {
-  await deployer.deploy(Tether);
+module.exports = async function(deployer, network, accounts) {
+  await deployer.deploy(Ballot, ["harsh", "krupal"]);
 };
