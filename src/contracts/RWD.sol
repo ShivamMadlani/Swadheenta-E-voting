@@ -1,21 +1,21 @@
 pragma solidity ^0.5.0;
 
-contract Tether {
-    string public name = "Tether";
-    string public symbol = "USDT";
+contract RWD {
+    string public name = "Reward Token";
+    string public symbol = "RWD";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8 public decimals = 18;
 
     event Transfer {
         address indexed _from;
         address indexed _to;
-        uint _value;
+        uint256 _value;
     }
 
-     event Approval {
+    event Approval {
         address indexed _owner;
         address indexed _spender;
-        uint _value;
+        uint256 _value;
     }
 
     mapping(address => uint256) public balanceOf;
