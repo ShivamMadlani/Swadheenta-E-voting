@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Web3 from "web3";
- import '../CSS/App.css'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import '../CSS/App.css'
 
 // component and pages import
 import Home from "../pages/Home";
+import UserLogin from "../pages/UserLogin";
 
 const App = () => {
   const [accounts, setAccounts] = useState([]);
@@ -21,11 +23,17 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <Home />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/vote" element={<UserLogin />}></Route>
+      </Routes>
+    </BrowserRouter>
+    // <div>
+    //   <div>
+    //     <Home />
+    //   </div>
+    // </div>
   );
 };
 
