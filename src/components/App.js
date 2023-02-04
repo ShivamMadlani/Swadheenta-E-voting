@@ -1,12 +1,15 @@
-import React, { useEffect , useState} from "react";
+import React, { useEffect, useState } from "react";
 import Web3 from "web3";
 
 const App = () => {
+  const [accounts, setAccounts] = useState([]);
+
   // function to load blockchain data
   async function loadBlockChainData() {
-    const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
-    const accounts = await web3.eth.getAccounts();
-    console.log(accounts);
+    const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
+
+    setAccounts(await web3.eth.getAccounts());
+    console.log(await web3.eth.getAccounts());
   }
 
   useEffect(() => {
@@ -15,7 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <idv>hello world</idv>
+      <div>hello world</div>
     </div>
   );
 };
