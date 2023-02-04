@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-### Blockchain Technology (A decentralized platform to ensure impartial and transparent voting systems)
+#### Blockchain Technology (A decentralized platform to ensure impartial and transparent voting systems)
 
 ## Team: DSC-DAIICT
 
@@ -14,6 +14,14 @@
 ## Features
 
 - Safe and secure e-voting system
-- Decentralised network about Candidates and Voters
-- System deployed on Ethereum
+- Decentralised network containing information about Candidates and Voters
+- System deployed on Ethereum to provide maximum up-time
 - Admin is able to watch realtime data about votes received by each candidates
+- Prevention of forged and duplicate voting
+
+## Progress
+
+- Learnt the underlying technology regarding Ethereum and Smart Contracts
+- Created dummy accounts on the localized test development environment Truffle Ganache using MetaMask
+- Wrote and deployed Smart Contract written in Solidity
+
