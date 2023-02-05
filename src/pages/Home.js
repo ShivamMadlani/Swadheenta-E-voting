@@ -16,7 +16,7 @@ const Home = () => {
               src={process.env.PUBLIC_URL + "/images/decentralised.png"}
               alt=""
             />
-            <div className="box-text">E-Voting</div>
+            <div className="box-text">Decentralised</div>
           </div>
 
           <div className="box">
@@ -25,7 +25,7 @@ const Home = () => {
               src={process.env.PUBLIC_URL + "/images/ethereum.jpg"}
               alt=""
             />
-            <div className="box-text">E-Voting</div>
+            <div className="box-text">Based on Ethereum</div>
           </div>
 
           <div className="box">

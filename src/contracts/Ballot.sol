@@ -1,6 +1,8 @@
+https://www.youtube.com/watch?v=sm8w9tDnMZc
+https://docs.ethers.org/v5/getting-started/
+https://docs.alchemy.com/docs/hello-world-smart-contract#create-and-deploy-your-smart-contract-using-truffle
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.5.0;
-pragma experimental ABIEncoderV2;
+pragma solidity >=0.7.0 <0.9.0;
 
 /// @title Voting with delegation.
 contract Ballot {
@@ -14,6 +16,7 @@ contract Ballot {
         uint256 vote; // index of the voted proposal
     }
     // This is a type for a single proposal.
+
     struct Proposal {
         string name; // short name (up to 32 bytes)
         uint256 voteCount; // number of accumulated votes
@@ -26,9 +29,9 @@ contract Ballot {
     Proposal[] public proposals;
 
     /// Create a new ballot to choose one of `proposalNames`.
-    constructor(string[] memory proposalNames) public {
+    constructor(string[] memory proposalNames) {
         chairperson = msg.sender;
-
+            
         // For each of the provided proposal names,
         // create a new proposal object and add it
         // to the end of the array.
@@ -42,7 +45,7 @@ contract Ballot {
 
     // Give `voter` the right to vote on this ballot.
     // May only be called by `chairperson`.
-    function giveRightToVote(address voter) external {
+    function giveRightToVote(address voter, uint256 noVotes) external {
         // If the first argument of `require` evaluates
         // to `false`, execution terminates and all
         // changes to the state and to Ether balances
@@ -59,7 +62,7 @@ contract Ballot {
         );
         require(!voters[voter].voted, "The voter already voted.");
         require(voters[voter].weight == 0);
-        voters[voter].weight = 1;
+        voters[voter].weight = noVotes;
     }
 
     /// Delegate your vote to the voter `to`.
@@ -111,7 +114,12 @@ contract Ballot {
         // If `proposal` is out of the range of the array,
         // this will throw automatically and revert all
         // changes.
-        proposals[proposal].voteCount += sender.weight;
+        proposals[proposal].voteCount ++;
+        sender.weight-- ;
+        if(sender.weight > 0)
+        {
+            sender.voted = false ;
+        }
     }
 
     /// @dev Computes the winning proposal taking all
@@ -129,7 +137,9 @@ contract Ballot {
     // Calls winningProposal() function to get the index
     // of the winner contained in the proposals array and then
     // returns the name of the winner
-    function winnerName() external view returns (string memory winnerName_) {
+    function winnerName() external view returns (string memory winnerName_, uint256 winningVoteCount) {
         winnerName_ = proposals[winningProposal()].name;
+        winningVoteCount = proposals[winningProposal()].voteCount;
+
     }
 }

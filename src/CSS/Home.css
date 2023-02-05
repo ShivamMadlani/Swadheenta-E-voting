@@ -10,19 +10,16 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: 1px solid black;
   height: 380px;
   border-radius: 1rem;
-}
-
-.box {
-  border: 1px solid #000;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
 }
 
 .box-img {
   height: 20em;
   width: 20em;
   border: 1px solid black;
+  border-radius: 8px;
 }
 
 .box-text {
